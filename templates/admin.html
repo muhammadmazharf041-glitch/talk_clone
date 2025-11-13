@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><title>Admin</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head><body>
+<div class="card">
+  <h2>Admin Panel</h2>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for cat,msg in messages %}<div class="alert {{cat}}">{{msg}}</div>{% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  {% if not logged %}
+    <form method="post"><label>Password</label><input name="password" type="password"><button class="btn">Login</button></form>
+  {% else %}
+    <form method="get"><label>Search</label><input name="search" value="{{ query }}"><button class="btn">Search</button></form>
+
+    <h3>Pending Invoices</h3>
+    <table class="simple">
+      <tr><th>ID</th><th>User</th><th>Plan</th><th>Amount</th><th>Proof</th><th>Action</th></tr>
+      {% for id,inv in invoices.items() %}
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ inv.user_name }}<br><small>{{inv.contact}}</small></td>
+          <td>{{ inv.plan }}</td>
+          <td>{{ inv.amount }}</td>
+          <td>{% if inv.proof_path %}<a href="/{{ inv.proof_path }}" target="_blank">View</a>{% elif inv.proof_url %}<a href="{{ inv.proof_url }}" target="_blank">View</a>{% else %}No proof{% endif %}</td>
+          <td>
+            {% if inv.status!='approved' %}
+              <form method="post" action="{{ url_for('admin_approve', iid=id) }}"><button class="btn">Approve</button></form>
+            {% else %}Approved: <code>{{ inv.token }}</code>{% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+    <h3>Active Subscriptions</h3>
+    <table class="simple">
+      <tr><th>Token</th><th>User</th><th>Plan</th><th>Expires</th><th>Devices</th></tr>
+      {% for t,s in subs.items() %}
+        <tr><td><code>{{ t }}</code></td><td>{{ s.user_name }}</td><td>{{ s.plan }}</td><td>{{ s.expires_at }}</td><td>{{ s.devices|length }}</td></tr>
+      {% endfor %}
+    </table>
+
+    <form action="{{ url_for('admin_logout') }}"><button class="btn">Logout</button></form>
+  {% endif %}
+  <a class="muted" href="{{ url_for('index') }}">← Home</a>
+</div>
+</body></html>

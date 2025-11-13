@@ -1,0 +1,15 @@
+body{font-family:Inter,system-ui,Arial;background:#0f1720;color:#e6eef6;margin:0;padding:30px}
+.card{background:linear-gradient(180deg,#071022 0%,#071627 100%);max-width:950px;margin:24px auto;padding:26px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+.center{text-align:center}
+h1,h2{margin:6px 0 18px}
+.btn{display:inline-block;background:#1f6feb;color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+.muted{color:#9fb0c7;text-decoration:none}
+input,textarea,select{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #223;background:#071022;color:#e6eef6}
+label{font-weight:600;font-size:0.95rem}
+.alert{padding:8px;background:#153842;margin:8px 0;border-radius:6px}
+.alert.danger{background:#3b1c1c}
+.plans-grid{display:flex;gap:12px;flex-wrap:wrap}
+.plan{background:#071827;padding:12px;border-radius:10px;flex:1;min-width:180px;text-align:center}
+.price{font-weight:800;font-size:1.4rem}
+table.simple{width:100%;border-collapse:collapse;margin-top:10px}
+table.simple th, table.simple td{padding:8px;border:1px solid #1b2a38}

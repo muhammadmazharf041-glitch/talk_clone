@@ -1,0 +1,9 @@
+# secrets + runtime artifacts
+service_account.json
+keys/
+token.txt
+*.pyc
+venv/
+local_storage/
+local_data/
+static/outputs/

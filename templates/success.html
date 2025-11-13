@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8"><title>Success</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head><body>
+<div class="card center">
+  <h2>Voice Generated ✅</h2>
+  <p>Your audio file is ready.</p>
+  {% if public_url %}
+    <p>Public Drive link: <a href="{{ public_url }}" target="_blank">Open</a></p>
+  {% endif %}
+  <p><a class="btn" href="{{ url_for('download', fname=out_filename) }}">Download</a></p>
+  <a class="muted" href="{{ url_for('index') }}">← Home</a>
+</div>
+</body></html>

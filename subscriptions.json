@@ -1,0 +1,41 @@
+{
+  "48f950bb901f": {
+    "user_name": "muhammad mazhar",
+    "contact": "03042309637",
+    "plan": "lapsync",
+    "created_at": "2025-11-10 04:52:26",
+    "expires_at": "2025-12-10 04:52:26",
+    "devices": [],
+    "max_devices": 3
+  },
+  "53c15df8c30a": {
+    "user_name": "muhammad waseem",
+    "contact": "03042309637",
+    "plan": "monthly",
+    "created_at": "2025-11-10 05:03:33",
+    "expires_at": "2025-12-10 05:03:33",
+    "devices": [],
+    "max_devices": 3
+  },
+  "eb4d0646f3d7": {
+    "user_name": "muhammad waseem",
+    "contact": "03042309637",
+    "plan": "monthly",
+    "created_at": "2025-11-10 05:04:04",
+    "expires_at": "2025-12-10 05:04:04",
+    "devices": [],
+    "max_devices": 3
+  },
+  "87f9540fc7a1": {
+    "user_name": "mazhar",
+    "contact": "03035014873",
+    "plan": "monthly",
+    "amount": "5000",
+    "approved_at": "2025-11-12T09:18:24.642461",
+    "expires_at": "2025-12-12T09:18:24.642461",
+    "devices": [
+      "laptop",
+      ""
+    ]
+  }
+}

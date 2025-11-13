@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TalkClone — Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="card center">
+    <h1>TalkClone — AI Voice Generator</h1>
+    <p>Create high-quality voice clones and LapSync jobs. Fast demo-ready interface.</p>
+    <div class="btn-row">
+      <a class="btn" href="{{ url_for('talkclone') }}">Talk Clone</a>
+      <a class="btn" href="{{ url_for('lapsync') }}">LapSync</a>
+      <a class="btn" href="{{ url_for('plans') }}">Plans</a>
+      <a class="btn" href="{{ url_for('admin') }}">Admin</a>
+    </div>
+  </div>
+</body>
+</html>

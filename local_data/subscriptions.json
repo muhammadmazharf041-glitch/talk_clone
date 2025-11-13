@@ -1,0 +1,15 @@
+{
+  "9d138453bfd0": {
+    "user_name": "mazhar",
+    "contact": "03042309637",
+    "plan": "basic",
+    "plan_label": "Basic (50 voices)",
+    "amount": 1500,
+    "created_at": "2025-11-10T11:51:49.406978",
+    "expires_at": "2025-12-10 11:51:49",
+    "devices": [
+      "laptop"
+    ],
+    "max_devices": 3
+  }
+}
