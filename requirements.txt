@@ -2,9 +2,6 @@ Flask==2.2.5
 python-dotenv==1.0.0
 pyngrok==5.0.0
 pydub==0.25.1
-# optional: only if you installed Coqui TTS locally and want python API usage
-TTS==0.15.6
-# optional for Google Drive upload (if you later want)
 google-api-python-client==2.83.0
 google-auth==2.22.0
 google-auth-httplib2==0.1.0
