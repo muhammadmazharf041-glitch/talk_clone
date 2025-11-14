@@ -2,6 +2,7 @@ Flask==2.2.5
 python-dotenv==1.0.0
 pyngrok==5.0.0
 pydub==0.25.1
+TTS>=0.14.2
 google-api-python-client==2.83.0
 google-auth==2.22.0
 google-auth-httplib2==0.1.0
